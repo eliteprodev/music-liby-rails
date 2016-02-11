@@ -1,14 +1,12 @@
 <article class="artist">
-  <h1><%= @artist.name %></h1>
-  <p><%= @artist.birthday %></p>
+  <h1>Artist name: <%= @artist.name %></h1>
+  <p>Birthday: <%= @artist.birthday %></p>
 
 <p><% @artist.songs.each do |s| %>
-
-  <h1><%= link_to s.title, s%></h1>
-  <p><%= s.release_date %></p>
-  <p><%= s.album %></p>
-  <p><%= s.artist_id %></p>
-
+  <h1>Song name:<%= link_to s.title, s%></h1>
+  <p>Release date:<%= s.release_date %></p>
+  <p>Album:<%= s.album %></p>
+  <p>Artist id (insignificant for the user :P)<%= s.artist_id %></p>
 <% end %>
 
 <p class="navigation">

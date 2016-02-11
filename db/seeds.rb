@@ -29,7 +29,7 @@ james_brown = Artist.create(
 
 # Songs
 i_shot_the_sheriff = Song.create(
-  title: "Bob Marley",
+  title: "I Shot The Sherif",
   release_date: Date.parse("1945-02-06"),
   album: "Burnin'",
   artist_id: bobmarley.id

@@ -1,8 +1,8 @@
 <article class="song">
-  <h1><%= @song.title %></h1>
-  <p><%= @song.release_date %></p>
-  <p><%= @song.album %></p>
-  <p><%= @song.artist_id %></p>
+  <h1>Title: <%= @song.title %></h1>
+  <p>Release Date: <%= @song.release_date %></p>
+  <p>Album: <%= @song.album %></p>
+  <p>Artist Id:<%= @song.artist_id %></p>
 
   <p class="navigation">
       <span class="btn btn-default"><%= link_to "Back", root_path %></span>
