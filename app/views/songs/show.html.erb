@@ -1,0 +1,12 @@
+<article class="song">
+  <h1><%= @song.title %></h1>
+  <p><%= @song.release_date %></p>
+  <p><%= @song.album %></p>
+  <p><%= @song.artist_id %></p>
+
+  <p class="navigation">
+      <span class="btn btn-default"><%= link_to "Back", root_path %></span>
+      <span class="btn btn-default"><%= link_to "Edit", edit_song_path(@song) %></span>
+      <span class="btn btn-default"><%= link_to "Destroy", song_path(@song), method: :delete %></span>
+    </p>
+  </article>
