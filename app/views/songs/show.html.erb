@@ -1,12 +1,12 @@
 <article class="song">
-  <h1>Title: <%= @song.title %></h1>
+  <h1><%= @song.title %></h1>
   <p>Release Date: <%= @song.release_date %></p>
   <p>Album: <%= @song.album %></p>
-  <p>Artist Id:<%= @song.artist_id %></p>
+  <p>See more songs by <%= link_to @song.artist.name, artist_path %></p>
 
   <p class="navigation">
-      <span class="btn btn-default"><%= link_to "Back", root_path %></span>
-      <span class="btn btn-default"><%= link_to "Edit", edit_song_path(@song) %></span>
-      <span class="btn btn-default"><%= link_to "Destroy", song_path(@song), method: :delete %></span>
+      <span class="btn btn-default grey lighten-5"><%= link_to "Back", root_path %></span>
+      <span class="btn btn-default grey lighten-5"><%= link_to "Edit", edit_song_path(@song) %></span>
+      <span class="btn btn-default grey lighten-5"><%= link_to "Destroy", song_path(@song), method: :delete %></span>
     </p>
   </article>

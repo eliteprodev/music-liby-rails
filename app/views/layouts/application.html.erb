@@ -6,7 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo left">_Music Liby</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to "Add New Artist", new_artist_path %></li>
+        <li><%= link_to "Add New Song", new_song_path %></li>
+      </ul>
+    </div>
+  </nav>
+<body class="container">
 
 <%= yield %>
 

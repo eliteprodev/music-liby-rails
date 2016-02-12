@@ -1,8 +1,12 @@
-<div class="col col s12 m6 l3">
+<div class="col col s12 m6 l4">
   <article class="card-panel hoverable">
-<h1>Song Title:<%= link_to song.title, song%></h1>
-<p>Song release date:<%= song.release_date %></p>
-<p>Song Album:<%= song.album %></p>
-<p>Song Artist ID ??<%= song.artist_id %></p>
-  </article>
+    <h1><%= link_to song.title, song%></h1>
+    <p>Song release date:
+      <%= song.release_date %></p>
+    <p>Song Album:
+      <%= song.album %></p>
+    <p>Song by:
+      <%= link_to song.artist.name, artist %></p>
+<span class="grey lighten-5"><%= link_to "Edit", edit_song_path(artist) %></span>  |  <span class="red lighten-5"><%= link_to "Destroy", song_path(song), method: :delete %></span>
+</article>
 </div>
