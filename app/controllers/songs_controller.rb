@@ -12,7 +12,7 @@ end
   # Create a song from the form params
   def create
     if @song = Song.create(song_params)
-      redirect_to root_path
+      redirect_to songs_path
     else
       render :new
     end
@@ -49,6 +49,6 @@ end
   private
 
   def song_params
-    params.require(:song).permit(:title, :release_date, :album, :artist_id)
+    params.require(:song).permit(:title, :release_date, :album, :songfile, :artist_id)
   end
 end
