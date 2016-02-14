@@ -36,11 +36,13 @@ def update
   end
 end
 
+
+
 def destroy
   @song = Song.find(params[:id])
 
   if @song.destroy
-    redirect_to root_path
+    redirect_to root_path, :notice => "Your post has been deleted successfully."
   else
     redirect_to @song
   end
