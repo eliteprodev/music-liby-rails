@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+  
   # A list of all available artists
   def index
     @artists = Artist.all
