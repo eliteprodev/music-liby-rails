@@ -9,22 +9,29 @@
 # Artists
 bobmarley = Artist.create(
   name: "Bob Marley",
-  birthday: Date.parse("1945-02-06")
+  birthday: Date.parse("1945-02-06"),
+  artistpicture: File.open(File.join(Rails.root, "/public/uploads/artist/artistpicture/1/BobMarley.jpg"))
 )
 
 rihanna = Artist.create(
   name: 'Rihanna',
-  birthday: Date.parse("1988-02-20")
+  birthday: Date.parse("1988-02-20"),
+  artistpicture: File.open(File.join(Rails.root, "/public/uploads/artist/artistpicture/2/Rihanna.jpg"))
+
 )
 
 mj = Artist.create(
   name: "Micheal Jackson",
-  birthday: Date.parse("1958-08-29")
+  birthday: Date.parse("1958-08-29"),
+  artistpicture: File.open(File.join(Rails.root, "/public/uploads/artist/artistpicture/3/MJ.jpg"))
+
 )
 
 james_brown = Artist.create(
   name: "James Brown",
-  birthday: Date.parse("1933-05-03")
+  birthday: Date.parse("1933-05-03"),
+  artistpicture: File.open(File.join(Rails.root, "/public/uploads/artist/artistpicture/4/JamesBrown.jpg"))
+
 )
 
 # Songs
@@ -74,7 +81,7 @@ thriller = Song.create(
   title: "Bad",
   release_date: Date.parse("1987-08-31"),
   album: "Bad",
-  songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/6/Michael_Jackson_-_Bad.png")),
+  songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/6/KG-Logo.png")),
 
   artist_id: mj.id
 

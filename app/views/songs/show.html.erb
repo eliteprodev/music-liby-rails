@@ -3,7 +3,9 @@
   <p>Release Date: <%= @song.release_date %></p>
   <p>Album: <%= @song.album %></p>
   <p>Song File: <%= image_tag @song.songfile %></p>
-  <p>See more songs by <%= link_to @song.artist.name, artist_path %></p>
+  <!-- <p>See more songs by <%= link_to @song.artist.name, artist_path %></p> -->
+  <p>See more songs by <%= link_to @song.artist.name, artist_path(@song.artist) %></p>
+
 
   <p class="navigation">
       <span class="btn btn-default grey lighten-5"><%= link_to "Back", root_path %></span>

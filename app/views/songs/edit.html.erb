@@ -1,4 +1,4 @@
-<h1>Add a new song:</h1>
+<h1>Edit Song:</h1>
 <%= form_for(@song) do |f| %>
 
 <%= f.label :title %>
@@ -13,9 +13,10 @@
 <br>
 <br>
 <%= f.label :artist_id %>
-<%= f.collection_select :artist_id, Artist.all, :id, :name, :prompt => true %> 
+<%= f.collection_select :artist_id, Artist.all, :id, :name, :prompt => true %>
 <br>
 <br>
 <br>
+
 <%= f.submit "Edit Song", :class => "btn btn-primary btn-lg green darken-1"%>
 <% end %>
