@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SeedingTheDatabase</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<nav>
+  <head>
+    <title>SeedingTheDatabase</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <nav>
     <div class="nav-wrapper">
       <a href="/" class="brand-logo left">_Music Liby</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><%= link_to "All Artists", artists_path %></li>
         <li><%= link_to "All Songs", songs_path %></li>
+        <% if user_signed_in? %>
         <li><%= link_to "Add New Artist", new_artist_path %></li>
         <li><%= link_to "Add New Song", new_song_path %></li>
+      <% else %>
+        <% end %>
+        <% if user_signed_in? %>
+        <li>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to('Login', new_user_session_path)  %>
+        </li>
+        <% end %>
+        <% if user_signed_in? %>
+        <li>
+          <%= link_to('Edit registration', edit_user_registration_path) %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to('Register', new_user_registration_path)  %>
+        </li>
+        <% end %>
+
       </ul>
     </div>
   </nav>
-<body class="container">
+  <body class="container">
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+    <% end %>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
