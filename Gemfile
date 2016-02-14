@@ -47,3 +47,4 @@ end
 gem 'materialize-sass'
 gem 'carrierwave'
 gem 'devise'
+gem 'cancancan'
