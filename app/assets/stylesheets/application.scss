@@ -16,6 +16,4 @@
  @import "materialize/components/color";
  $primary-color: color("light-blue", "darken-2") !default;
  @import 'materialize';
- select{
-    display: inline-block;
-  }
+ select{display: inline-block;}
