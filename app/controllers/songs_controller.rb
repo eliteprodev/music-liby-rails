@@ -41,12 +41,11 @@ end
 def destroy
   @song = Song.find(params[:id])
 
-  if @song.destroy
+@song.destroy
     redirect_to root_path, :notice => "Your song has been deleted successfully."
-  else
-    redirect_to @song
-  end
+
 end
+
 
   private
 
