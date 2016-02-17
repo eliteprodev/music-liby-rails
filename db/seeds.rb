@@ -47,7 +47,7 @@ man_down = Song.create(
   title: "Man Down",
   release_date: Date.parse("2010-01-01"),
   album: "Loud",
-  songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/2/KG-Logo.png")),
+  songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/1/KG-Logo.png")),
   artist_id: rihanna.id
 )
 
@@ -55,7 +55,7 @@ thriller = Song.create(
   title: "Thriller",
   release_date: Date.parse("1982-11-30"),
   album: "Thriller",
-  songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/3/michael-jackson-thriller.jpg")),
+  songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/1/KG-Logo.png")),
   artist_id: mj.id
 
 )
@@ -64,7 +64,7 @@ i_feel_good = Song.create(
   title: "I Feel Good",
   release_date: Date.parse("1964-01-01"),
   album: "Out Of Sight",
-  songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/4/KG-Logo.png")),
+  songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/1/KG-Logo.png")),
   artist_id: james_brown.id
 
 )
@@ -73,7 +73,7 @@ three_little_birds = Song.create(
   title: "Three Little Birds",
   release_date: Date.parse("1977-01-01"),
   album: "Exodus",
-    songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/5/KG-Logo.png")),
+    songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/1/KG-Logo.png")),
   artist_id: bobmarley.id
 )
 
@@ -81,7 +81,7 @@ thriller = Song.create(
   title: "Bad",
   release_date: Date.parse("1987-08-31"),
   album: "Bad",
-  songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/6/KG-Logo.png")),
+  songfile: File.open(File.join(Rails.root, "/public/uploads/song/songfile/1/KG-Logo.png")),
 
   artist_id: mj.id
 

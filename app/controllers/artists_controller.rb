@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  
+
   # A list of all available artists
   def index
     @artists = Artist.all
@@ -41,7 +41,8 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
 
     if @artist.destroy
-      redirect_to root_path
+      redirect_to artists_path, :notice => "Your song has been deleted successfully."
+
     else
       redirect_to @artist
     end
