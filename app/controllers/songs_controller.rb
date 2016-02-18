@@ -4,7 +4,7 @@ def index
   @songs = Song.all
 end
 
-# Add a new song as a provider
+# Add a new song as a user
   def new
     @song = Song.new
   end

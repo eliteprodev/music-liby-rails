@@ -4,8 +4,30 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+
 # column: value
 #
-two: {}
+
 #  column: value
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+tjeff:
+   name: Thomas Jefferson
+   email: tjeff@us.gov
+
+cdar:
+   name: Charles Darwin
+   email: charles@evolve.org
+
+nik:
+   name: Nikola Tesla
+   email: nik@inductlabs.com
+
+contact:
+   name: Genghis Khan
+   email: contact@empire.com
+
+x:
+   name: Malcom X
+   email: x@theroost.org
