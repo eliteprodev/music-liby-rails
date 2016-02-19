@@ -45,7 +45,7 @@ def index
     if @user.destroy
       redirect_to root_path, :notice => "Your user has been deleted successfully."
     else
-      redirect_to @user
+      redirect_to @users
     end
   end
 
