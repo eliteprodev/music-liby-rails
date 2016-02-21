@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Song, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'Belongs to the artist' do
+    it { should belong_to(:artist) }
+  end
+
+  describe 'Belongs to an Album' do
+    it { should belong_to(:album) }
+  end
 end

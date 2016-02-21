@@ -87,6 +87,14 @@ thriller = Song.create(
 
 )
 
+
+
+thriller = Album.create(
+album_title: "Bad",
+album_cover: File.open(File.join(Rails.root, "/public/uploads/song/songfile/1/KG-Logo.png")),
+artist_id: mj.id
+)
+
 #index is for the array
 
 #key is for the hash

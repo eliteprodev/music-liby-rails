@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+  resources :albums
 devise_for :users
   devise_scope :user do
      get "signup", to: "devise/registrations#new"

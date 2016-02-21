@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160214210721) do
+ActiveRecord::Schema.define(version: 20160220222526) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "albums", force: :cascade do |t|
+    t.string   "album_title"
+    t.string   "album_cover"
+    t.integer  "artist_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "albums", ["artist_id"], name: "index_albums_on_artist_id", using: :btree
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
@@ -23,15 +36,16 @@ ActiveRecord::Schema.define(version: 20160214210721) do
 
   create_table "songs", force: :cascade do |t|
     t.string   "title"
-    t.date     "release_date"
-    t.string   "album"
+    t.string   "release_date"
+    t.string   "songfile"
     t.integer  "artist_id"
+    t.integer  "album_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.string   "songfile"
   end
 
-  add_index "songs", ["artist_id"], name: "index_songs_on_artist_id"
+  add_index "songs", ["album_id"], name: "index_songs_on_album_id", using: :btree
+  add_index "songs", ["artist_id"], name: "index_songs_on_artist_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -57,10 +71,13 @@ ActiveRecord::Schema.define(version: 20160214210721) do
     t.integer  "roles_mask"
   end
 
-  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["name"], name: "index_users_on_name"
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["name"], name: "index_users_on_name", using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
+  add_foreign_key "albums", "artists"
+  add_foreign_key "songs", "albums"
+  add_foreign_key "songs", "artists"
 end

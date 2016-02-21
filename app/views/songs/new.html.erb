@@ -5,14 +5,16 @@
 <%= f.text_field :title %>
 <%= f.label :release_date %>
 <%= f.text_field :release_date %>
-<%= f.label :album %>
-<%= f.text_field :album %>
 <%= f.label :songfile %>
 <br>
 <br>
 <br>
 <%= f.file_field :songfile %>
 <br>
+<br>
+<br>
+<%= f.label :album_id %>
+<%= f.collection_select :album_id, Album.all, :id, :album_title, prompt: true %>
 <br>
 <br>
 <%= f.label :artist_id %>
