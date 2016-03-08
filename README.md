@@ -1,7 +1,7 @@
 #_Music Liby
 ##Music Database Ruby on Rails
 
-I've made this [music database](https://github.com/khalilgharbaoui/music-database-ruby-on-rails) as a homework assignement during my traineeship at [Codaisseur](https://github.com/Codaisseur)
+I've made this [music database](https://github.com/khalilgharbaoui/music-database-ruby-on-rails) as a homework assignement during my traineeship at [Codaisseur](https://github.com/Codaisseur).
 
 ###Requirements:
 
