@@ -1,4 +1,4 @@
-I've made this music database as a homework assignement during my traineeship at <a href="//github.com/Codaisseur">Codaisseur</a>.
+I've made this music database as a homework assignement during my traineeship at <a href="https://github.com/Codaisseur">Codaisseur</a>.
 
 Requirements:
 
