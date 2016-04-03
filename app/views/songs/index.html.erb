@@ -1,4 +1,19 @@
-<div class="row">
+<p id="notice"><%= notice %></p>
+<h1>Listing Songs</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Image</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Released</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+<tbody>
 <%= render @songs %>
-</div>
+</tbody>
+</table>
+<br>
 <%= link_to "Add New Song", new_song_path, class: "btn btn-primary btn-lg green darken-1" %>

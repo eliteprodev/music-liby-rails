@@ -23,6 +23,7 @@
     <%= f.label :artist_id %>
     <%= f.collection_select :artist_id, Artist.all, :id, :name, prompt: true %>
   </div>
+  <br />
   <div class="actions">
     <%= f.submit %>
   </div>

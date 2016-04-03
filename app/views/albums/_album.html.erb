@@ -1,0 +1,8 @@
+<div class="col col s12 m6 l3">
+  <article class="card-panel hoverable">
+<p><h2><%= link_to album_path(album) do %><%= album.album_title %><% end%></h2></p>
+<%= link_to album_path(album) do %><%= image_tag album.album_cover, style: "width: 100%;" %><% end%>
+<!--  <%= Artist.find(album.artist_id).name %> -->
+<p><%= link_to'Show', album %> | <%= link_to 'Edit', edit_album_path(album) %></td> | <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+</article>
+</div>

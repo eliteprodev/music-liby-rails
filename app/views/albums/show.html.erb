@@ -1,19 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Album title:</strong>
-  <%= @album.album_title %>
-</p>
+<p><h1><%= @album.album_title %></h1></p>
 
-<p>
-  <strong>Album cover:</strong>
-  <%= image_tag @album.album_cover %>
-</p>
+<p><%= image_tag @album.album_cover, style: "width:200px;" %></p>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @album.artist %>
-</p>
+<p>Album by <%= Artist.find(@album.artist_id).name %></p>
+<br />
+ <%= link_to 'Back', albums_path %> | <%= link_to 'Edit Album', edit_album_path(@album) %> | <span class="red lighten-5"><%= link_to "Destroy", album_path(@album), method: :delete %></span>
+</article>
 
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+<h2>All Songs in <%= @album.album_title %></h2>
+<br>
+<div class="row">
+  <% @album.songs.each do |song| %>
+  <div class="col col s12 m6 l3">
+    <article class="card-panel hoverable">
+      <p>
+        <h3><%= link_to song.title, song %></h3>
+      </p>
+    <p><%= link_to song_path(song) do %>
+        <%= image_tag song.songfile, style: "width:100%;" %>
+        <% end %></p>
+      <p>Song by <%= Artist.find(song.artist_id).name %></p>
+
+      <span class="grey lighten-5"><%= link_to "Edit Song", edit_song_path(song) %></span>
+      |
+      <span class="red lighten-5"><%= link_to "Destroy", song_path(song), method: :delete %></span>
+    </article>
+      <% end %>
+  </div>
