@@ -57,6 +57,7 @@ end
 
 
 gem 'carrierwave'
+gem 'carrierwave-dropbox'
 gem 'devise'
 gem 'cancancan'
 
@@ -72,3 +73,4 @@ end
   # materialize CSS
   gem 'materialize-sass'
   gem 'font-awesome-sass', '~> 4.5.0'
+  gem "figaro"

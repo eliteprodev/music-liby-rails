@@ -1,7 +1,8 @@
 <article class="song">
   <h1><%= @song.title %></h1>
   <p>Release Date: <%= @song.release_date %></p>
-  <p><%= image_tag @song.songfile, style: "width:200px;" %></p>
+  <p>Album: <%= @song.album %></p>
+  <p>Song File: <%= image_tag @song.songfile %></p>
   <!-- <p>See more songs by <%= link_to @song.artist.name, artist_path %></p> -->
   <p>See more songs by <%= link_to @song.artist.name, artist_path(@song.artist) %></p>
 
@@ -12,3 +13,4 @@
       <span class="btn btn-default grey lighten-5"><%= link_to "Destroy", song_path(@song), method: :delete %></span>
     </p>
   </article>
+  

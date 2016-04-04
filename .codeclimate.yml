@@ -1,0 +1,36 @@
+engines:
+  rubocop:
+    enabled: true
+    checks:
+    Rubocop/Lint/AssignmentInCondition:
+      enabled: false
+    #checks:
+    # Rubocop/Metrics/ClassLength:
+    #   enabled: false
+  brakeman:
+    enabled: true
+    #exclude_fingerprints:
+    #- 08c185b3f764f262539a1f76997d3a89
+  eslint:
+    enabled: false
+  csslint:
+    enabled: false
+  duplication:
+    enabled: true
+    checks:
+      Similar code:
+        enabled: false
+    config:
+      languages:
+      - ruby
+        #mass_threshold: 30
+      # - javascript
+ratings:
+  paths:
+  - app/**
+  - lib/**
+  - "**.rb"
+  - "**.go"
+exclude_paths:
+- spec/**/*
+- "**/vendor/**/*"
