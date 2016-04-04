@@ -1,4 +1,4 @@
-#Music Liby
+#Music Liby [![Build Status](https://travis-ci.org/khalilgharbaoui/music-database-ruby-on-rails.svg?branch=master)](https://travis-ci.org/khalilgharbaoui/music-database-ruby-on-rails) [![Code Climate](https://codeclimate.com/github/khalilgharbaoui/music-database-ruby-on-rails/badges/gpa.svg)](https://codeclimate.com/github/khalilgharbaoui/music-database-ruby-on-rails) [![Test Coverage](https://codeclimate.com/github/khalilgharbaoui/music-database-ruby-on-rails/badges/coverage.svg)](https://codeclimate.com/github/khalilgharbaoui/music-database-ruby-on-rails/coverage) [![Issue Count](https://codeclimate.com/github/khalilgharbaoui/music-database-ruby-on-rails/badges/issue_count.svg)](https://codeclimate.com/github/khalilgharbaoui/music-database-ruby-on-rails)
 ##Music Database in Ruby on Rails
 
 
