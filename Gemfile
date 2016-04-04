@@ -74,6 +74,5 @@ end
   gem 'materialize-sass'
   gem 'font-awesome-sass', '~> 4.5.0'
   gem "figaro"
-
   #code climate
   gem "codeclimate-test-reporter", group: :test, require: nil
