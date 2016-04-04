@@ -9,7 +9,7 @@ addons:
   code_climate: 1f60990c6bf1337bd1d28759a140072bb3e79c58d4e781f51a62607efd8fec19
 before_script:
 - cp config/database.travis.yml config/database.yml
-- RAILS_ENV=test bundle exec rake db:drop db:create db:migrate
+- RAILS_ENV=test rake db:drop db:create db:migrate
 script:
 - bundle exec rspec spec/
 deploy:
