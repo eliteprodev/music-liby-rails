@@ -34,3 +34,16 @@ My personal goal is to add:
 
   - User authentication for the ability to view, edit, update & remove [optional]
   - adding a link to the Spotify preview of the song using an API
+  
+###Install
+to install this project execute the following commands in the terminal:
+
+```
+bundle install
+rake db:create
+rake db:migrate
+open http://localhost:3000
+```
+  
+
+![alt text](https://raw.githubusercontent.com/khalilgharbaoui/music-database-ruby-on-rails/master/public/Music_Liby.png)
