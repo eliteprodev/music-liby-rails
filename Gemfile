@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
@@ -35,31 +34,46 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'factory_girl_rails'
   # Access an IRB console on exception pages or by using <%= console %> in views
 
-  gem 'rails_db'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
+  gem 'rspec'
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-bundler'
-  gem 'rb-fsevent' if `uname` =~ /Darwin/
+
   gem 'terminal-notifier-guard'
   gem 'shoulda-matchers'
 
-end
-
-
-group :development do
-
-gem 'web-console', '~> 2.0'
+  group :test, :darwin do
+    gem 'rb-fsevent'
+  end
 
 end
 
-gem 'materialize-sass'
+
 gem 'carrierwave'
+gem 'carrierwave-dropbox'
 gem 'devise'
 gem 'cancancan'
+
+group :development do
+  gem 'seed_dump'
+  # gem 'web-console'
+#  gem 'rails_db'
+end
+  gem 'rack-cors', require: 'rack/cors'
+  gem 'puma'
+  gem 'rails_12factor'
+
+  # materialize CSS
+  gem 'materialize-sass'
+  gem 'font-awesome-sass', '~> 4.5.0'
+  gem "figaro"
+
+  #code climate
+  gem "codeclimate-test-reporter", group: :test, require: nil

@@ -51,6 +51,6 @@ class ArtistsController < ApplicationController
   private
 
   def artist_params
-    params.require(:artist).permit(:name, :birthday, :artistpicture)
+    params.require(:artist).permit(:name, :artistpicture)
   end
 end

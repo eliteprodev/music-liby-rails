@@ -1,34 +1,26 @@
 <div class="artist">
   <h1>Artist name:
     <%= @artist.name %></h1>
-  <p>Birthday:
-    <%= @artist.birthday %></p>
-    <p>Artistpicture:</p>
-      <p><%= image_tag @artist.artistpicture %></p>
+<p><%= image_tag @artist.artistpicture %></p>
   <span class="btn btn-default grey lighten-5"><%= link_to "Back", root_path %></span>
   <span class="btn btn-default grey lighten-5"><%= link_to "Edit", edit_artist_path(@artist) %></span>
   <span class="btn btn-default grey lighten-5"><%= link_to "Destroy", artist_path(@artist), method: :delete %></span>
 </div>
-<br>
-<h2>All Songs by
-  <%= @artist.name %></h2>
-<br>
+<br />
+<% if Song.exists?(artist_id: @artist.id) %>
+<h2>All Songs by <%= @artist.name %></h2>
+<br />
 <div class="row">
   <% @artist.songs.each do |song| %>
   <div class="col col s12 m6 l3">
     <article class="card-panel hoverable">
       <p>
-        <h3><%= link_to song.title, song%></h3>
+        <h3><%= link_to song.title, song %></h3>
       </p>
-      <p>Release date:
-        <%= song.release_date %></p>
-      <p>Album:
-        <%= song.album %></p>
-      <p><%= link_to song_path(song) do %>
+    <p><%= link_to song_path(song) do %>
         <%= image_tag song.songfile, style: "width:100%;" %>
         <% end %></p>
-      <p>Song by:
-        <%= song.artist.name %></p>
+
       <!--  <p>Song by: <%= link_to song.artist.name, @artist_path %></p> -->
       <span class="grey lighten-5"><%= link_to "Edit", edit_song_path(song) %></span>
       |
@@ -36,6 +28,10 @@
     </article>
   </div>
   <% end %>
+  <% else %>
+  <h2><%= @artist.name %> does not have any songs in this liby yet!<br />Please add a song.</h2>
+  <p><%= link_to "Add New Song", new_song_path, class: "btn btn-primary btn-lg green darken-1" %></p>
 
-  <br>
-  <br>
+    <% end %>
+    <br />
+    <br />

@@ -1,12 +1,25 @@
 default: &default
+<<<<<<< HEAD
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+||||||| merged common ancestors
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+=======
+  adapter: postgresql
+
+  timeout: 5000
+>>>>>>> musy
+
+  encoding: unicode
 
 development:
   <<: *default
+<<<<<<< HEAD
   database: music_liby_development
 
   # The specified database role being used to connect to postgres.
@@ -35,6 +48,11 @@ development:
   #   log, notice, warning, error, fatal, and panic
   # Defaults to warning.
   #min_messages: notice
+||||||| merged common ancestors
+  database: db/development.sqlite3
+=======
+  database: music_liby_development
+>>>>>>> musy
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -64,6 +82,13 @@ test:
 #
 production:
   <<: *default
+<<<<<<< HEAD
   database: music_liby_production
   username: music_liby
   password: <%= ENV['MUSIC_LIBY_DATABASE_PASSWORD'] %>
+||||||| merged common ancestors
+  database: db/production.sqlite3
+=======
+  database: music_liby_production
+  
+>>>>>>> musy
