@@ -62,9 +62,13 @@ gem 'cancancan'
 
 group :development do
   gem 'seed_dump'
-  gem 'web-console'
+  # gem 'web-console'
 #  gem 'rails_db'
 end
   gem 'rack-cors', require: 'rack/cors'
   gem 'puma'
   gem 'rails_12factor'
+
+  # materialize CSS
+  gem 'materialize-sass'
+  gem 'font-awesome-sass', '~> 4.5.0'

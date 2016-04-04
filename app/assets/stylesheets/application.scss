@@ -10,12 +10,23 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
- // @import "materialize/components/color";
- // @import 'materialize';
- // $primary-color: color("light-blue", "darken-2") !default;
- // select{display: inline-block;}
- //
- 
+//= require_tree .
+//= require_self
+
+@import "materialize";
+@import "materialize/components/color";
+@import "materialize/extras/nouislider";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+$primary-color: color("light-blue", "darken-2") !default;
+select{display: inline-block;}
+
+nav {
+  color: #fff;
+  background-color: #6ec0ee;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+}

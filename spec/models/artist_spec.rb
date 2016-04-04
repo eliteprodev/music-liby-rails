@@ -12,10 +12,6 @@ RSpec.describe Artist, type: :model do
     it { should respond_to :name }
   end
 
-  describe 'Has an birth day' do
-    it { should respond_to :birthday }
-  end
-
   describe 'Has an artist picture' do
     it { should respond_to :artistpicture }
   end

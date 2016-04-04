@@ -16,19 +16,8 @@ ActiveRecord::Schema.define(version: 20160220222526) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "albums", force: :cascade do |t|
-    t.string   "album_title"
-    t.string   "album_cover"
-    t.integer  "artist_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_index "albums", ["artist_id"], name: "index_albums_on_artist_id", using: :btree
-
   create_table "artists", force: :cascade do |t|
     t.string   "name"
-    t.date     "birthday"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.string   "artistpicture"
@@ -37,14 +26,13 @@ ActiveRecord::Schema.define(version: 20160220222526) do
   create_table "songs", force: :cascade do |t|
     t.string   "title"
     t.string   "release_date"
+    t.string   "album"
     t.string   "songfile"
     t.integer  "artist_id"
-    t.integer  "album_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
-  add_index "songs", ["album_id"], name: "index_songs_on_album_id", using: :btree
   add_index "songs", ["artist_id"], name: "index_songs_on_artist_id", using: :btree
 
   create_table "users", force: :cascade do |t|
@@ -77,7 +65,5 @@ ActiveRecord::Schema.define(version: 20160220222526) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
-  add_foreign_key "albums", "artists"
-  add_foreign_key "songs", "albums"
   add_foreign_key "songs", "artists"
 end

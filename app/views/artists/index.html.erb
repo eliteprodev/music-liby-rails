@@ -1,5 +1,12 @@
 <h1>Welcome to _Music Liby</h1>
   <div class="row">
   <%= render @artists %>
+
 </div>
+
+<% if user_signed_in? %>
 <%= link_to "Add New Artist", new_artist_path, class: "btn btn-primary btn-lg green darken-1" %>
+<% if Artist.exists? %>
+<%= link_to "Add Song", new_song_path, class: "btn btn-primary btn-lg green darken-1" %>
+<% end %>
+<% end %>
