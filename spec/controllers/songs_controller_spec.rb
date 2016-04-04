@@ -52,12 +52,6 @@ RSpec.describe SongsController, type: :controller do
     end
   end
 
-  describe "GET #new" do
-    it "assigns a new song as @song" do
-      get :new, {}, valid_session
-      expect(assigns(:song)).to be_a_new(Song)
-    end
-  end
 
   describe "GET #edit" do
     it "assigns the requested song as @song" do

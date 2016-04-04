@@ -52,13 +52,6 @@ RSpec.describe ArtistsController, type: :controller do
     end
   end
 
-  describe "GET #new" do
-    it "assigns a new artist as @artist" do
-      get :new, {}, valid_session
-      expect(assigns(:artist)).to be_a_new(Artist)
-    end
-  end
-
   describe "GET #edit" do
     it "assigns the requested artist as @artist" do
       artist = Artist.create! valid_attributes
