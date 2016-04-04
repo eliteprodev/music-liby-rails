@@ -5,9 +5,9 @@ RSpec.describe "Artists", type: :request do
 
 
   describe "GET /artists" do
-    it "works! (now write some real specs)" do
+    it "does not work user has to be signed in" do
       get artists_path
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(302)
     end
   end
 
