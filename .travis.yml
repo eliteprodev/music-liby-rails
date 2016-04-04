@@ -1,4 +1,3 @@
-sudo: false
 language: ruby
 cache:
   directories:
@@ -7,10 +6,16 @@ rvm:
 - 2.1.5
 addons:
   postgresql: '9.5'
-    code_climate:
-    1f60990c6bf1337bd1d28759a140072bb3e79c58d4e781f51a62607efd8fec19
+  code_climate: 1f60990c6bf1337bd1d28759a140072bb3e79c58d4e781f51a62607efd8fec19
 before_script:
 - cp config/database.travis.yml config/database.yml
 - RAILS_ENV=test bundle exec rake db:drop db:create db:migrate
 script:
 - bundle exec rspec spec/
+deploy:
+  provider: heroku
+  api_key:
+    secure: bq43XBbAntQcGBbXQjYehQX3HuOmEzxRqTAEVlw9VDo3S8zVQgN/rKlxR2BW7tEE2TReCw+YGFvuqqhl0VlCfhqe8iVR2QahGDbmFpmpMaRKfZSf8rm53zxAhn7oz0dQfYVwJdABY0WcNLb9WXR+KP7OK10N0N/hKVoTwOEWSSTsAH7FG9wgalzaK1NpRmipT3xBERrfkqhe6OlSzc9CRCR+6lDwd5UefM5fhkDg8wBDYX4sh7FFwggmJteyJRh+TmxHJD8/56ycdS2Mhtng6F7cPWdzTRC0vyXrhUpo71NtI6vUeD8N0sQys1+zyPQ4LXiBI9f8sqCH0yiQVlQ5vBu6jFm+lyqxEq9DHv3/dbh2eO7cIE041zjLlTGnB6axEhq3A2ynt5282QHEiUP6r9NU43kTQJ9aUCArIE0aZuk7meG79riJXpDzsAnOba/xrtytIs38SyvfX0BkKq33YxGc/N+HYEDGR8HJNq2NjDPIc+oGkqjcsbuvHjgkcw/Zo4fgSXvDhcV9J9TwUsdxlRHaRf1wlnihVwy73LXnnbqOJd6VXsUkasZEz79kiwCemkSUYOga5Wdm+AQ7SSVYoPrVsQKNDLQV6XD7iZKxYOYIRPucBb88pCNy7eBqjL7Px4s8KV4seNUiA8NvktPz/a4aJZ0p1fPBha7UA5eO1fI=
+  app: music-liby
+  on:
+    repo: khalilgharbaoui/music-database-ruby-on-rails
