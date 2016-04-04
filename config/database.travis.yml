@@ -1,3 +1,5 @@
 test:
   adapter: postgresql
   database: music_liby_test
+  username: postgres
+  
