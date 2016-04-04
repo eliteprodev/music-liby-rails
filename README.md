@@ -6,6 +6,14 @@
 
 I've made this [music database](https://github.com/khalilgharbaoui/music-database-ruby-on-rails) as a homework assignment during my traineeship at [Codaisseur](http://codaisseur.com).
 
+The main objective was to learn how to:
+- Create or add new entries.
+- Read, retrieve, search, or view existing entries.
+- Update or edit existing entries.
+- Delete/deactivate existing entries.
+
+a.k.a: [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+
 ###Demo
 
 http://music-liby.herokuapp.com
@@ -38,7 +46,7 @@ http://music-liby.herokuapp.com
 My personal goal is to add:
 
   - User authentication for the ability to view, edit, update & remove [optional]
-  - adding a link to the Spotify preview of the song using an API
+  - adding a link to the Spotify preview of the song using a RESTful API
   
 ###Install
 to install this project execute the following commands in the terminal:
