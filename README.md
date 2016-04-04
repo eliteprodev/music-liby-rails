@@ -6,6 +6,11 @@
 
 I've made this [music database](https://github.com/khalilgharbaoui/music-database-ruby-on-rails) as a homework assignment during my traineeship at [Codaisseur](http://codaisseur.com).
 
+###Demo
+
+http://music-liby.herokuapp.com
+(register with a fake email and password)
+
 ###Requirements:
 
   - Create a new artist (that has many_songs)
@@ -46,4 +51,4 @@ open http://localhost:3000
 ```
   
 
-![alt text](https://raw.githubusercontent.com/khalilgharbaoui/music-database-ruby-on-rails/master/public/Music_Liby.png)
+![alt text](https://raw.githubusercontent.com/khalilgharbaoui/music-database-ruby-on-rails/master/Music_Liby.png)
