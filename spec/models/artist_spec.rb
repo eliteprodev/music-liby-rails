@@ -4,9 +4,6 @@ RSpec.describe Artist, type: :model do
   describe 'Has many songs' do
     it { is_expected.to have_many(:songs) }
   end
-  describe 'Has many Albums' do
-    it { is_expected.to have_many(:albums) }
-  end
 
   describe 'Has a name' do
     it { should respond_to :name }

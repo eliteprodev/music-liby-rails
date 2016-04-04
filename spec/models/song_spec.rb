@@ -5,7 +5,4 @@ RSpec.describe Song, type: :model do
     it { should belong_to(:artist) }
   end
 
-  describe 'Belongs to an Album' do
-    it { should belong_to(:album) }
-  end
 end
