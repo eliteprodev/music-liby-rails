@@ -6,7 +6,7 @@
 
 I've made this [music database](https://github.com/khalilgharbaoui/music-database-ruby-on-rails) as a homework assignment during my traineeship at [Codaisseur](http://codaisseur.com).
 
-The main objective was to learn how to:
+The main objective was to the basics of Ruby on Rails and learn how to:
 - Create or add new entries.
 - Read, retrieve, search, or view existing entries.
 - Update or edit existing entries.
