@@ -6,13 +6,18 @@
 
 I've made this [music database](https://github.com/khalilgharbaoui/music-database-ruby-on-rails) as a homework assignment during my traineeship at [Codaisseur](http://codaisseur.com).
 
-The main objective was to the basics of Ruby on Rails and learn how to:
+The main objective was to learn the basics of Ruby on Rails how to:
 - Create or add new entries.
 - Read, retrieve, search, or view existing entries.
 - Update or edit existing entries.
 - Delete/deactivate existing entries.
 
 a.k.a: [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+
+- User Authentication (devise)
+- File Upload (carrierwave)
+
+
 
 ###Demo
 
